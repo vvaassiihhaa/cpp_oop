@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 
-// здесь объявляйте класс
 class Goods {
 public:
 
@@ -10,6 +9,7 @@ public:
     int price;         // цена
 
     const std::string& get_name() {
+        return this->name;
     } // возвращает ссылку на поле name
 
     double get_weight() {
@@ -23,7 +23,16 @@ public:
 };
 
 int main( void ) {
-    // здесь продолжайте функцию main
+
+    Goods book, toy;
+
+    book.name = "Основы ООП";
+    book.weight = 234.5;
+    book.price = 2000;
+
+    toy.name = "Oculus Quest 3";
+    toy.weight = 204.6;
+    toy.price = 80000;
 
     __ASSERT_TESTS__ // макроопределение для тестирования (не убирать и должно идти непосредственно перед return 0 или перед освобождением памяти)
     return 0;
